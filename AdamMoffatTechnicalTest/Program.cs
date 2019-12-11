@@ -10,19 +10,29 @@ namespace AdamMoffatTechnicalTest
 
 		static void Main(string[] args)
 		{
-			Console.WriteLine("Hello World!");
+			//Console.WriteLine("Hello World!");
 
-			var cs = "AaaaaaaBbbccaaaaaaaaaaaAAAAAAAa";
-			//Problem one.
-			var stringTechTest = new StringTextTechTest();
-			stringTechTest.TechTestOne(cs);
-			//problem number two;
-			Console.WriteLine("Tech test number 2");
-			var BTTTT2 = new BinaryTreeTechTest2();
-			BTTTT2.TestTreeSolution();
+			//var cs = "AaaaaaaBbbccaaaaaaaaaaaAAAAAAAa";
+			////Problem one.
+			//var stringTechTest = new StringTextTechTest();
+			//stringTechTest.TechTestOne(cs);
+			////problem number two;
+			//Console.WriteLine("Tech test number 2");
+			//var BTTTT2 = new BinaryTreeTechTest2();
+			//BTTTT2.TestTreeSolution();
 
-			Console.WriteLine("Tech Test number 3");
-			var premutationsTest = new PrenumtationsTest("ABC");
+			//Console.WriteLine("Tech Test number 3");
+			//var premutationsTest = new PrenumtationsTest("ABC");
+
+			var WheelTechTest = new WheelTechnicalTest();
+
+			var fileStrings = WheelTechTest.FileStrings();
+			WheelTechTest.SideSplitter(fileStrings);
+
+			Console.WriteLine("left side");
+			WheelTechTest.OnRoadTempCalculation(WheelTechTest.LeftSide);
+			Console.WriteLine("Right side");
+			WheelTechTest.OnRoadTempCalculation(WheelTechTest.RightSide);
 
 		}
 
